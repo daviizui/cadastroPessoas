@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./js/adicionaItem.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>7DayOfCodeFormulário</title>
+</head>
+
+<body>
+    <section class="container">
+        <section class="form">
+            <h1>Cadastro de pessoas</h1>
+            <form class="form js-form" id="form">
+                <label for="name">
+                    Nome
+                    <input class="form-field js-field" id="name" maxlength="120" name="name" required type="text">
+                </label>
+                <label for="birth-date">
+                    Data de Nascimento
+                    <input class="form-field js-field" id="birth-date" name="birth-date" required type="date">
+                </label>
+                <button id="salvar-btn" type="submit">Salvar</button>
+            </form>
+        </section>
+        <table class="tabela" bgcolor="black">
+            <tr class="tabela-header">
+                <th class="header-nome">Nome</th>
+                <th class="header-data">Data de Nacimento</th>
+                <th class="header-acoes">Ações</th>
+            </tr>
+            <tr class="tabela-corpo">
+                <td class="corpo-nome">Davi Izui</td>
+                <td class="corpo-data">08/09/1994</td>
+                <td class="corpo-acoes">Editar</td>
+            </tr>
+            
+        </table>
+    </section>
+</body>
+
+</html>
