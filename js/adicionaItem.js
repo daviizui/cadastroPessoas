@@ -1,7 +1,8 @@
 const nome = document.querySelector('#name');
 const dataNacimento = document.querySelector('#birth-date');
-const salvarForm = document.querySelector('#form')
-const table = document.querySelector(".tabela")
+const salvarForm = document.querySelector('#form');
+const table = document.querySelector(".tabela");
+
  
 const pessoas = JSON.parse(localStorage.getItem("pessoas")) || []
 
@@ -32,19 +33,24 @@ salvarForm.addEventListener("submit", enviarDadosIniciais);
 function enviarDadosIniciais(e) {
     e.preventDefault()
     
-    const pessoa = {
+    const pessoinha = {
         nomeDigitado: nome.value,
         dataNacimentoDigitada: dataNacimento.value 
     }
 
-    pessoas.push(pessoa);
-    const elementoPessoa = criarNovaPessoa(pessoa)
-    table.append(elementoPessoa)
+    pessoas.push(pessoinha);
     localStorage.setItem("pessoas", JSON.stringify(pessoas))
-    textArea.value = ''// não funciona
+    criaLinhaNaTabela(pessoinha);
+    
+    nome.value = ''
+    dataNacimento.value = ''
 }
 
 pessoas.forEach(pessoa => {
-    const elementoPessoa = criarNovaPessoa(pessoa)
-    table.append(elementoPessoa)
+    criaLinhaNaTabela(pessoa);
 });
+
+function criaLinhaNaTabela(umaPessoa){
+    const elementoPessoa = criarNovaPessoa(umaPessoa);
+    table.append(elementoPessoa);
+}
