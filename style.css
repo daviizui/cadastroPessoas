@@ -58,3 +58,26 @@ body{
     background-color:#eff3ec ;
     text-align: center;
 }
+
+.corpo-acoes{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-editar{
+    background-color: #8ddb5f;
+    border: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-deletar{
+    background-color: #e0726e;
+    border: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
