@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>7DayOfCodeFormulário</title>
@@ -26,22 +26,33 @@
                 <button id="salvar-btn" type="submit">Salvar</button>
             </form>
         </section>
-        <table class="tabela" id="tabela" >
-            <tr class="tabela-header">
-                <th class="header-nome">Nome</th>
-                <th class="header-data">Data de Nacimento</th>
-                <th class="header-acoes">Ações</th>
-            </tr>
-            <tr class="tabela-corpo" id="item-lista">
-                <td class="corpo-nome">Davi Izui</td>
-                <td class="corpo-data">08/09/1994</td>
-                <td class="corpo-acoes">
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-deletar">Deletar</button>
-                </td>
-            </tr>
-            
+        <table class="tabela" id="tabela">
+            <thead>
+                <tr class="tabela-header">
+                    <th class="header-nome">Nome</th>
+                    <th class="header-data">Data de Nacimento</th>
+                    <th class="header-acoes">Ações</th>
+                </tr>
+            </thead>
+            <tbody class="tabela-corpo" id="tabela-corpo"></tbody>
         </table>
+    </section>
+    <section class="modal hidden">
+        <div class="flex">
+            <button class="btn-close">⨉</button>
+        </div>
+        <div>
+            <form class="form js-form" id="form-modal">
+                <label for="name">
+                    Nome
+                    <input class="form-field js-field" id="name-modal" maxlength="120" name="name" required type="text">
+                </label>
+                <label for="birth-date">
+                    Data de Nascimento
+                    <input class="form-field js-field" id="birth-date-modal" name="birth-date" required type="date">
+                </label>
+                <button id="confirmar-btn-modal" type="submit">Confirmar</button>
+            </form>
     </section>
 </body>
 
